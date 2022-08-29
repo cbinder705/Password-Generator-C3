@@ -1,4 +1,7 @@
-
+var numbers="01234567890"
+var lowercase="abcedefghijklmnopqrstuvwxyz"
+var upercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var special = "!@#$%^&*"
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -10,8 +13,17 @@ function writePassword() {
 
 }
 
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+function generatePasword(){
+  let pw = " ";
+  let passwordLength= 0;
+  let numbers;
+  let lowercase;
+  let upercase;
+  let special;
+}
 
 
 let question1 = prompt('Select character amount between 8 & 128');
