@@ -13,7 +13,7 @@ function generatePassword(){
     alert('Please enter a number between 8 and 128.');
   } else
     {
-  let littleLetters = confirm('Include lowercase?');
+  let littleLetters = confirm('Include lowercase?'); // used confirm rather than prompt for ok/cancel
   if (littleLetters){
     pw+=lowercase;
   }
@@ -30,11 +30,11 @@ function generatePassword(){
     pw+=special;
     // test if confirm is working
   }
-  //generatePasword();
+  
 }
 let pword= " "
 for (let i=0; i<passwordLength; i++){
-pword += pw.charAt(Math.floor(Math.random() * pw.length)) //charAt returns new string
+pword += pw.charAt(Math.floor(Math.random() * pw.length)) //charAt returns new string for passswordLength
 
 }
 return pword;}
