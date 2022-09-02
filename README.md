@@ -29,3 +29,4 @@ THEN the password is either displayed in an alert or written to the page
 
 ![passgen-image] (images\passgenss.png)
 
+https://cbinder705.github.io/Password-Generator-C3/
