@@ -5,13 +5,13 @@ const upercase="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const special = "!@#$%^&*()></"
 var pw = " ";
 var generateBtn = document.querySelector("#generate");
-console.log(generateBtn);
 
-function generatePasword(){
+
+function generatePassword(){
   let passwordLength = prompt('Please select a character amount between 8 & 128.');
-  if(passwordLength <8 || passwordLength > 128 || isNaN(parseInt(passwordLength)));{ //parse int returns number rather than string
+  if(passwordLength <8 || passwordLength > 128 || isNaN(parseInt(passwordLength))){ //parse int returns number rather than string
     alert('Please enter a number between 8 and 128.');
-  } // remember else
+  } else
     {
   let littleLetters = confirm('Include lowercase?');
   if (littleLetters){
@@ -28,16 +28,17 @@ function generatePasword(){
   let sCharacters = confirm('Include special characters?');
   if(sCharacters){
     pw+=special;
-    
+    // test if confirm is working
   }
-  generatePasword();
+  //generatePasword();
 }
 let pword= " "
-for (let i=0; i<passwordLength; i++)
+for (let i=0; i<passwordLength; i++){
 pword += pw.charAt(Math.floor(Math.random() * pw.length)) //charAt returns new string
-return pword;
-}
 
+}
+return pword;}
+// starter code
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -49,5 +50,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-console.log(generateBtn);
+
 
